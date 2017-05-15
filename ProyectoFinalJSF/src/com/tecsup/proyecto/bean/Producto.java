@@ -14,7 +14,7 @@ public class Producto implements Serializable {
 	private int calificacion;
 	private String precio;
 	private Blob foto;
-	/sdsdsd
+	
 	public Producto(String nombre, String marca, String direccion, int calificacion, String precio, Blob foto) {
 		super();
 		this.nombre = nombre;
