@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html">
+	
+  <h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Insert title here</title>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/> 
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css"/>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+	
+	<h:outputStylesheet library="css" name="login.css"/>
+	<h:outputStylesheet library="css" name="style.css"/>
+	<h:outputScript library="js" name="jquery-ui.js" />
+	  
+  </h:head>
+  <h:body>
+	<div class="col-lg-4 col-md-7 col-sm-6 col-xs-12   login-card">
+	 
+	<!-- LOGIN --> 
+	 <h:form id="login-form" class="col-lg-12">
+       <!-- Logo -->
+       <div class="col-lg-12 logo-kapsul">
+         <img width="100" class="logo" src="https://selimdoyranli.com/cdn/material-form/img/logo.png" alt="Logo" />
+       </div>
+       <!-- #Logo -->
+     
+       <!-- USUARIO -->       
+       <div class="row">
+         <div class="input-field col s12">
+          <h:inputText id="usuario" class="validate"/>
+          <label for="usuario"><i class="material-icons">perm_identity</i>Usuario</label>
+         </div>
+ 	   </div>
+	 
+      <!-- PASSWORD-->
+       <div class="row" id="campos">
+         <div class="input-field col s12">
+          <h:inputSecret id="password" class="validate"/>
+          <label for="password"><i class="material-icons">lock_outline</i>Password</label>
+         </div>
+ 	   </div>
+
+        <!-- ButTon -->
+        <center>
+        <h:commandButton href="index.xhtml" class="kayit-ol-buton" id="campo" value="Ingresar" action="#{userData.validarUsuario}"/>
+        </center>
+
+        <!-- OPCIONES -->
+        <div class="forgot-and-create tab-menu">
+            <a class="sifre-hatirlat-link" href="javascript:void('sifre-hatirlat-link');" id="opc">Olvidaste tu contrase&ntilde;a</a>
+            <a class="hesap-olustur-link" href="javascript:void('hesap-olustur-link');" id="opc">Crear Cuenta.</a>
+        </div>
+    </h:form>
+    <!-- FIN LOGIN --> 
+
+    <!-- REGISTRAR -->
+    <h:form id="kayit-form" class="col-lg-12">
+
+      <div class="col-lg-12 logo-kapsul">
+        <img width="100" class="logo" src="https://selimdoyranli.com/cdn/material-form/img/logo.png" alt="Logo" />
+      </div>
+     
+      <!-- USUARIO -->   
+	  <div class="row">
+         <div class="input-field col s12">
+          <h:inputText id="usuario2" class="validate" value="#{userData.inUsuario}"/>
+          <label for="usuario2"><i class="material-icons">perm_identity</i>Usuario</label>
+         </div>
+ 	  </div>
+	  
+	  <!-- PASSWORD -->
+      <div class="row" id="campos">
+         <div class="input-field col s12">
+          <h:inputSecret id="password1" class="validate" value="#{userData.inContrasena}"/>
+          <label for="password1"><i class="material-icons">lock_outline</i>Password</label>
+         </div>
+ 	  </div>
+	  
+      <!-- REPETIR PASSWORD -->
+      <div class="row" id="campos">
+         <div class="input-field col s12">
+          <h:inputSecret id="password3" class="validate"/>
+          <label for="password3"><i class="material-icons">lock_outline</i>Repetir Password</label>
+         </div>
+ 	  </div>
+	  
+	  <!-- BOTON PREGUNTA -->
+	  <div class="row">
+      	<a class="waves-effect waves-light btn" href="adicional.xhtml"><i class="material-icons right">touch_app</i>Pregunta de seguridad</a> 
+      </div>
+      	  
+      <!-- BOTON -->
+      <center>
+      <h:commandButton href="index.xhtml" class="kayit-ol-buton" id="campo" value="Registrar" action="#{userData.createUsuario}"/>
+      </center>
+
+      <!-- OPCIONES -->
+      <a class="zaten-hesap-var-link" href="javascript:void('zaten-hesap-var-link');" id="op">Iniciar sessi&oacute;n</a>
+      
+	</h:form>
+	<!-- FIN REGISTRAR --> 
+
+    <!-- RECUPERAR -->
+    <h:form id="sifre-hatirlat-form" class="col-lg-12">
+     <div class="col-lg-12 logo-kapsul">
+       <img width="100" class="logo" src="https://selimdoyranli.com/cdn/material-form/img/logo.png" alt="Logo" />
+     </div>
+
+
+     <!-- USUARIO -->
+     <div class="row">
+         <div class="input-field col s12">
+          <h:inputText id="usuario3" class="validate"/>
+          <label for="usuario3"><i class="material-icons">perm_identity</i>Usuario</label>
+         </div>
+ 	 </div>
+	 
+	 <!-- NUEVO PASSWORD -->  
+	 <div class="row" id="campos">
+         <div class="input-field col s12">
+          <h:inputSecret id="password4" class="validate"/>
+          <label for="password4"><i class="material-icons">lock_outline</i>Nuevo Password</label>
+         </div>
+ 	  </div> 
+	 
+	 <!-- REPETIR PASSWORD --> 
+	 <div class="row" id="campos">
+         <div class="input-field col s12">
+          <h:inputSecret id="password5" class="validate"/>
+          <label for="password5"><i class="material-icons">lock_outline</i>Repetir Password</label>
+         </div>
+ 	  </div> 
+	 
+	 <!-- BOTON PREGUNTA -->
+	  <div class="row">
+      	<a class="waves-effect waves-light btn" href="adicional.xhtml"><i class="material-icons right">touch_app</i>Pregunta de seguridad</a> 
+      </div>
+	 
+     <!-- BOTON -->
+     <center>
+     <h:commandButton value="Recuperar" class="sifre-hatirlat-buton" id="campo" action="#{useData.recuperarUsuario}"/>
+     </center>
+
+     <!-- OPCIONES -->
+     <a class="zaten-hesap-var-link" href="javascript:void('zaten-hesap-var-link');" id="op">Iniciar sessi&oacute;n</a>
+       
+	</h:form>
+	<!-- FIN RECUPERAR --> 
+	</div>
+  
+ <script>
+	$(document).ready(function(){
+		$("#kayit-form").hide();
+		$("#sifre-hatirlat-form").hide();	
+	
+	  $(".hesap-olustur-link").click(function(e){
+		$("#login-form").slideUp(0);	
+		$("#kayit-form").fadeIn(300);	
+	  });
+
+	  $(".zaten-hesap-var-link").click(function(e){
+		$("#kayit-form").slideUp(0);
+		$("#sifre-hatirlat-form").slideUp(0);	
+		$("#login-form").fadeIn(300);	
+	  });
+
+	  $(".sifre-hatirlat-link").click(function(e){
+		$("#login-form").slideUp(0);	
+		$("#sifre-hatirlat-form").fadeIn(300);	
+	  });
+	});		
+ </script>
+  </h:body>
+</html>

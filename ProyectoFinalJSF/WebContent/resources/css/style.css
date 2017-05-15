@@ -1,0 +1,22 @@
+@CHARSET "ISO-8859-1";
+#pregunta {
+	color: white;
+	font-size: 20px;
+}
+
+#op{
+	text-align: center;
+	font-size: 20px;
+}
+
+#opc{
+	font-size: 16px;
+}
+
+#campos{
+	margin-top: 35px;
+}
+
+#campo{
+	margin-top: 40px;
+}
