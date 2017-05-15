@@ -24,7 +24,7 @@ public class UserData implements Serializable{
 	private String inContrasena;
 	private String inPregunta;
 	private String inRespuesta;
-	//ñugoydufpuopituoytd
+	
 	private Usuario usuario;
 
 	public int getInId() {
