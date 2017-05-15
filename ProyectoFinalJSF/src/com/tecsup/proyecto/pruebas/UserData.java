@@ -18,7 +18,6 @@ import com.tecsup.proyecto.db.ConectionDB;
 public class UserData implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
-	dfskdcerjofhervrrt
 	private int inId;
 	private String inUsuario;
 	private String inContrasena;

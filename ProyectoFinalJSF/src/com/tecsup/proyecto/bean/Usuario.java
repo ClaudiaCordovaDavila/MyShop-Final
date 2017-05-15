@@ -10,7 +10,6 @@ public class Usuario implements Serializable{
 	private String contraseña;
 	private String pregunta;
 	private String respuesta;
-	//gfkgffu
 	public Usuario(int id, String usuario, String contraseña, String pregunta, 
 			String respuesta){
 		super();
