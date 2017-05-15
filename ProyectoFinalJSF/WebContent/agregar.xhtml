@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
+	<title>MyShop</title>
+	<h:outputStylesheet library="css" name="style.css" />
+	<h:outputStylesheet library="css" name="styles.css" />
+	<h:outputStylesheet library="css" name="style.scss" />
+	<h:outputStylesheet library="css" name="styles2.css" />
+	<h:outputStylesheet library="css" name="styles3.css" />
+	<h:outputStylesheet library="css" name="styles4.css" />
+	<h:outputStylesheet library="css" name="styles5.css" />
+	
+	<h:outputScript library="js" name="jquery-ui.js" />
+
+</h:head>
+
+<h:body>
+
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		<header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
+		   <div class="mdl-layout__header-row portfolio-logo-row">
+		    <span class="mdl-layout__title">
+		      <div class="portfolio-logo"></div>
+		      <span class="mdl-layout__title">MyShop</span>
+		    </span>
+		   </div>
+		   <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
+		    <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+		     <a class="mdl-navigation__link is-active" href="index.xhtml">Inicio</a>
+		     <a class="mdl-navigation__link" href="productos.html">Productos</a>
+		     <a class="mdl-navigation__link" href="login.html">Iniciar Sesión</a>
+		     <a class="mdl-navigation__link" href="agregar.xhtml">Agregar producto</a>
+		    </nav>
+		   </div>
+		 </header>
+	</div>
+	
+	<div id="agregar">
+	 	<table style="width:60%">
+	 	  <tr>
+	 	 	<th width="30%"><h9>Nombre del producto</h9></th>
+	 		<th width="30%"><input type="text" value="#{managerData.inNombre}"/></th>
+	 	  </tr>
+	  	  <tr>
+	 	 	<th><h9>Precio del producto</h9></th>
+	 		<th><input type="number" value="#{managerData.inPrecio}"/></th>
+	 	  </tr>
+	 	  <tr>
+	 	 	<th><h9>Marca</h9></th>
+	 		<th>
+	 			<select name="speed" id="speed" value="#{managerData.inMarca}">
+	 			<option>---Seleccionar---</option>
+	      		 <option>Gloria</option>
+	      		 <option>Laive</option>
+	     		 <option>Costeño</option>
+	     		 <option>Milquito</option>
+	     		 <option>Primor</option>
+	    		</select>
+	 		</th>
+	 	  </tr>
+	 	  <tr>
+	 	 	<th><h9>Imagen del producto</h9></th>
+	 		<th><input type="file" /></th>
+	 	  </tr>
+	 	  <tr>
+	 	 	<th><h9>Dirección de la tienda</h9></th>
+	 		<th><input type="text" value="#{managerData.inDireccion}"/></th>
+	 	  </tr>
+	 	</table>
+	 	<input type="reset" id="boton" value="Enviar" action="#{managerData.createProducto}"/>
+ 	</div>
+	
+</h:body>
+</html>
