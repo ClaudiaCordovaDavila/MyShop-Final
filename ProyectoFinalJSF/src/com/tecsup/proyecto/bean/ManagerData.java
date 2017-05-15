@@ -26,7 +26,7 @@ public class ManagerData implements Serializable {
 	private int inCalificacion;
 	private String inPrecio;
 	private BLOB inFoto;
-	//kgtfkgh
+	//kg
 	private Producto producto;
 
 	
