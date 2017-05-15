@@ -3,7 +3,7 @@ package com.tecsup.proyecto.bean;
 import java.io.Serializable;
 import java.sql.Blob;
 
-
+//sdss
 
 public class Producto implements Serializable {
 
